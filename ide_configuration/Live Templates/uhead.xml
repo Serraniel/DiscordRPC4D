@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="uhead" invoke="none">
+		<description>
+            Adds an automatic unit header to the files.
+		</description>
+		<author>
+            Serraniel
+		</author>
+		<code language="Pascal"><![CDATA[
+            // ********************************************************************************************** //
+            // *                                         DiscordRPC4D                                       * //
+            // *                               Copyright (C) 2018 by Serraniel                              * //
+            // *                                                                                            * //
+            // *                          https://github.com/Serraniel/DiscordRPC4D/                        * //
+            // ********************************************************************************************** //
+            ]]>
+		</code>
+	</template>
+</codetemplate>

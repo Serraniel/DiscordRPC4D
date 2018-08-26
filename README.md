@@ -1,2 +1,3 @@
 # DiscordRPC4D
-Discord RPC wrapper for Delphi
+
+**Work in progress. Please check develop branch as far as there is no release version!**

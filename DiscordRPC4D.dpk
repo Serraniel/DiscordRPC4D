@@ -26,7 +26,7 @@ package DiscordRPC4D;
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'Discord RPC Wrapper for Delphi'}
-{$LIBSUFFIX '-debug-x32'}
+{$LIBSUFFIX '-debug-x86'}
 {$IMPLICITBUILD ON}
 
 requires

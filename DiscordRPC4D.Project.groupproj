@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5C0E3A34-71B0-44CF-9CDD-8B93F574A5DA}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DiscordRPC4D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DiscordRPC4D.Example.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DiscordRPC4D">
+        <MSBuild Projects="DiscordRPC4D.dproj"/>
+    </Target>
+    <Target Name="DiscordRPC4D:Clean">
+        <MSBuild Projects="DiscordRPC4D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DiscordRPC4D:Make">
+        <MSBuild Projects="DiscordRPC4D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DiscordRPC4D_Example">
+        <MSBuild Projects="DiscordRPC4D.Example.dproj"/>
+    </Target>
+    <Target Name="DiscordRPC4D_Example:Clean">
+        <MSBuild Projects="DiscordRPC4D.Example.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DiscordRPC4D_Example:Make">
+        <MSBuild Projects="DiscordRPC4D.Example.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DiscordRPC4D;DiscordRPC4D_Example"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DiscordRPC4D:Clean;DiscordRPC4D_Example:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DiscordRPC4D:Make;DiscordRPC4D_Example:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

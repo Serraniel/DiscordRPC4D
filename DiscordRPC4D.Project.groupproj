@@ -6,9 +6,6 @@
         <Projects Include="DiscordRPC4D.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="DiscordRPC4D.Example.dproj">
-            <Dependencies/>
-        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -26,23 +23,14 @@
     <Target Name="DiscordRPC4D:Make">
         <MSBuild Projects="DiscordRPC4D.dproj" Targets="Make"/>
     </Target>
-    <Target Name="DiscordRPC4D_Example">
-        <MSBuild Projects="DiscordRPC4D.Example.dproj"/>
-    </Target>
-    <Target Name="DiscordRPC4D_Example:Clean">
-        <MSBuild Projects="DiscordRPC4D.Example.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="DiscordRPC4D_Example:Make">
-        <MSBuild Projects="DiscordRPC4D.Example.dproj" Targets="Make"/>
-    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DiscordRPC4D;DiscordRPC4D_Example"/>
+        <CallTarget Targets="DiscordRPC4D"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DiscordRPC4D:Clean;DiscordRPC4D_Example:Clean"/>
+        <CallTarget Targets="DiscordRPC4D:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DiscordRPC4D:Make;DiscordRPC4D_Example:Make"/>
+        <CallTarget Targets="DiscordRPC4D:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

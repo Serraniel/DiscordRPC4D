@@ -69,7 +69,6 @@
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_LegacyIFEND>true</DCC_LegacyIFEND>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
-        <DCC_OutputXMLDocumentation>true</DCC_OutputXMLDocumentation>
         <DCC_PentiumSafeDivide>true</DCC_PentiumSafeDivide>
         <DCC_XmlOutput>.\docs</DCC_XmlOutput>
         <GenDll>true</GenDll>
@@ -130,6 +129,7 @@ $(PostBuildEvent)]]>
         <VerInfo_MajorVer>1</VerInfo_MajorVer>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <DCC_MapFile>3</DCC_MapFile>
         <DllSuffix>-debug-x64</DllSuffix>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_MajorVer>1</VerInfo_MajorVer>
